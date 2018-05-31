@@ -52,6 +52,9 @@ GEM
       autoprefixer-rails (>= 6.0.3)
       popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     case_transform (0.2)
       activesupport
@@ -233,6 +236,7 @@ DEPENDENCIES
   active_model_serializers (~> 0.10.0)
   bcrypt (~> 3.1.7)
   bootstrap
+  bootstrap-sass
   debase
   devise
   factory_bot_rails

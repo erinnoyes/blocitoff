@@ -69,5 +69,7 @@ group :development do
   # using mailcatcher for emails
 end
 
+gem 'bootstrap-sass'
+
 # Used for ENV variables
 gem 'figaro', '1.0'
