@@ -50,8 +50,6 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'shoulda'
   gem 'factory_bot_rails'
-  gem 'faker'
-
 end
 
 group :development do
@@ -68,7 +66,9 @@ group :development do
   # using mailcatcher for emails
 end
 
-gem 'bootstrap-sass'
+  gem 'bootstrap-sass'
+
+  gem 'faker'
 
 # Used for ENV variables
 gem 'figaro', '1.0'
