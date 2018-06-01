@@ -2,7 +2,14 @@
   <%= current_user.email %>
 </div>
 
-<h3>Your To-do List!</h3>
+  <h2>Your To-do List!</h2>
 
+<div class="col-md-8">
+    <%= render partial: 'items/form' %>
+</div>
+
+<div class="col-md-8">
+  <%= render partial: 'items/item' %>
+</div>
 
 <%= link_to "Edit Account", edit_user_registration_path, class: 'btn btn-info' %>
