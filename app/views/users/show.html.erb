@@ -1,15 +1,13 @@
 <div>
-  <%= current_user.email %>
+  <h2><% @user.email %> To-do</h2>
+</div
+
+<div>
+    <% @user.items.each do |item| %>
+      <%= render item %>
+    <% end %>
 </div>
 
-  <h2>Your To-do List!</h2>
-
-<div class="col-md-8">
-    <%= render partial: 'items/form' %>
+<div>
+  <%= render partial: 'items/form', locals: { item: @item } %>
 </div>
-
-<div class="col-md-8">
-  <%= render partial: 'items/item' %>
-</div>
-
-<%= link_to "Edit Account", edit_user_registration_path, class: 'btn btn-info' %>
