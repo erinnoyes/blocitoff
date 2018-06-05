@@ -1,12 +1,13 @@
-<% @user.items.each do |item| %>
-  <div class="media">
-    <div class="media-body">
-      <h4 class="media-heading">
-        <%= item.name %>
-      </h4>
-      <p>
-        created <%= time_ago_in_words(item.created_at) %> ago
-      </p>
-    </div>
+<div class="row">
+  <div class="col-md-6">
+    <ul class="list-group">
+    <li class="list-group-item" id="<%= item.id %>">
+      <b><%= item.name %></b>
+      <%= link_to "", [item.user, item], remote: true, method: :delete, class: 'glyphicon glyphicon-ok' %>
+      <small>
+        created <%= time_ago_in_words(item.created_at) %> ago by <%= item.user.email %>
+      </small>
+    </li>
+  </ul>
   </div>
-<% end %>
+</div>

@@ -12,9 +12,24 @@ class ItemsController < ApplicationController
     end
   end
 
+  def destroy
+    @item = current_user.items.find(params[:id])
+
+    if @item.destroy
+      flash[:notice] = "To-do done!"
+    else
+      flash.now[:alert] = "Error deleting. Please try again"
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   private
 
   def item_params
     params.require(:item).permit(:name)
   end
-end 
+end
