@@ -4,9 +4,7 @@
     <li class="list-group-item" id="<%= item.id %>">
       <b><%= item.name %></b>
       <%= link_to "", [item.user, item], remote: true, method: :delete, class: 'glyphicon glyphicon-ok' %>
-      <small>
-        created <%= time_ago_in_words(item.created_at) %> ago by <%= item.user.email %>
-      </small>
+    <small>Item will be deleted automatically in <%= distance_of_time_in_words(Time.now, item.created_at + 7.days) %></small>
     </li>
   </ul>
   </div>
